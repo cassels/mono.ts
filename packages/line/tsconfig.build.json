@@ -1,8 +1,8 @@
 {
-  "extends": "../tsconfig.build.json",
+  "extends": "../../tsconfig.build.json",
   "compilerOptions": {
     "rootDir": "src",
-    "outDir": "dist"
+    "outDir": "lib"
   },
   "include": ["src"],
   // This tells the tsc compiler: "Hey, before you build me, please build this package

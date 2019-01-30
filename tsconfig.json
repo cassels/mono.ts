@@ -4,8 +4,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@geo/point": ["point/src/index.ts"],
-      "@geo/line": ["line/src/index.ts"]
+      "@geo/*": ["packages/*/src/index.ts"]
     }
   }
 }

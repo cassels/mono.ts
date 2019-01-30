@@ -27,10 +27,10 @@
   // All the packages that needs building
   "references": [
     {
-      "path": "line/tsconfig.build.json"
+      "path": "packages/line/tsconfig.build.json"
     },
     {
-      "path": "point/tsconfig.build.json"
+      "path": "packages/point/tsconfig.build.json"
     }
   ]
 }

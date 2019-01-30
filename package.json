@@ -8,12 +8,25 @@
     "packages/*"
   ],
   "scripts": {
-    "test": "lerna run test",
-    "build": "tsc --build packages/tsconfig.build.json"
+    "test": "jest",
+    "test:ci": "jest --coverage --coverageReporters=text-lcov | coveralls",
+    "test:watch": "jest --watchAll",
+    "lint": "prettier --write '**/**/*.{ts,tsx,js,jsx}'",
+    "clean": "yarn run clean:lib && yarn run clean:node",
+    "clean:lib": "rm -rf ./packages/*/lib/",
+    "clean:node": "rm -rf node_modules && rm -rf ./packages/*/node_modules/",
+    "build:clean": "yarn run clean:lib && yarn build",
+    "build": "tsc --build tsconfig.build.json"
   },
   "devDependencies": {
-    "lerna": "^3.8.0",
-    "tsconfig-paths": "^3.7.0",
+    "@types/jest": "^23.3.12",
+    "jest": "^23.6.0",
+    "lerna": "^3.10.7",
+    "prettier": "^1.15.3",
+    "ts-jest": "^23.10.5",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-config-standard": "^8.0.1",
     "typescript": "^3.2.2"
   }
 }
